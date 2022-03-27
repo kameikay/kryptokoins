@@ -9,7 +9,12 @@ import { FormGroup } from "../../components/FormGroup";
 import { LoginInput } from "../../components/LoginInput";
 
 import { useError } from "../../hooks/useError";
-import animationData from "../../utils/animations/92445-crypto-bitcoin.json";
+import animationData from "../../utils/animations/login-animation.json";
+
+import { Loading } from "../../components/Loading";
+import { useNavigate } from "react-router-dom";
+import isEmailValid from "../../utils/isEmailValid";
+import { SuccessModal } from "../../components/SuccessModal";
 
 const defaultOptions = {
   loop: true,
@@ -23,6 +28,9 @@ const defaultOptions = {
 export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const navigate = useNavigate();
   const { errors, getErrorMessageByFieldName, removeError, setError } =
     useError();
 
@@ -31,6 +39,8 @@ export default function Login() {
 
     if (!event.target.value) {
       setError({ fieldName: "email", message: "E-mail é obrigatório" });
+    } else if (event.target.value && !isEmailValid(event.target.value)) {
+      setError({ fieldName: "email", message: "E-mail inválido" });
     } else {
       removeError("email");
     }
@@ -46,8 +56,29 @@ export default function Login() {
     }
   }
 
+  function handleLogin(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (errors.length === 0 && email && password) {
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        setIsSuccess(true);
+
+        setTimeout(() => {
+          setIsSuccess(false);
+          navigate("/dashboard");
+        }, 1500);
+      }, 1500);
+    } else {
+      setError({ fieldName: "email", message: "E-mail é obrigatório" });
+      setError({ fieldName: "password", message: "Senha é obrigatória" });
+    }
+  }
   return (
     <Container>
+      {isLoading && <Loading />}
+      {isSuccess && <SuccessModal />}
       <LeftContainer>
         <Lottie
           options={defaultOptions}
@@ -66,7 +97,7 @@ export default function Login() {
           </p>
         </div>
 
-        <form>
+        <form onSubmit={(event) => handleLogin(event)}>
           <FormGroup label="E-mail" error={getErrorMessageByFieldName("email")}>
             <LoginInput
               value={email}

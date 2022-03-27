@@ -66,7 +66,7 @@ export const RightContainer = styled.div`
       margin-top: 1rem;
     }
 
-    > button {
+    button {
       margin-top: 2rem;
       width: 100%;
       height: 40px;
