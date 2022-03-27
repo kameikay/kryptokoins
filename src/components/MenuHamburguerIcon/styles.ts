@@ -34,7 +34,7 @@ export const Container = styled.button<IContainer>`
   &:hover {
     svg path,
     rect {
-      fill: ${({ theme }) => theme.colors.primary.dark};
+      fill: ${({ theme }) => theme.colors.primary.main};
     }
   }
 

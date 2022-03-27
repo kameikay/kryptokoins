@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import { iconsPath } from '../../utils/iconsPath';
 import { CustomIcon } from '../CustomIcon';
 import { Container } from './styles';
