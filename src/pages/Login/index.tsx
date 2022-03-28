@@ -67,7 +67,7 @@ export default function Login() {
 
         setTimeout(() => {
           setIsSuccess(false);
-          navigate("/dashboard");
+          navigate("/home");
         }, 1500);
       }, 1500);
     } else {
@@ -123,7 +123,7 @@ export default function Login() {
             <MdLockOutline size={24} />
           </FormGroup>
 
-          <button disabled={errors.length > 0}>Entrar</button>
+          <button disabled={errors.length > 0 || !email}>Entrar</button>
         </form>
       </RightContainer>
     </Container>

@@ -15,14 +15,30 @@ const loadingOptions = {
   },
 };
 
-export function Loading() {
-  return (
+export function Loading({
+  width = 796,
+  height = 714,
+}: {
+  width?: number;
+  height?: number;
+}) {
+  return width !== 796 && height !== 714 ? (
+    <Container>
+      <Lottie
+        options={loadingOptions}
+        width={width}
+        height={height}
+        isStopped={false}
+        isPaused={false}
+      />
+    </Container>
+  ) : (
     <Overlay>
       <Container>
         <Lottie
           options={loadingOptions}
-          width={796}
-          height={714}
+          width={width}
+          height={height}
           isStopped={false}
           isPaused={false}
         />

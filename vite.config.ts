@@ -5,3 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()]
 })
+
+interface ImportMetaEnv {
+  readonly VITE_NOMICS_API_KEY: string
+}

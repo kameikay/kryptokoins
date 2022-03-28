@@ -17,6 +17,7 @@ export const Container = styled.aside<IContainer>`
   justify-content: space-between;
   transition: all 1s ease-in-out;
   z-index: 99;
+
   .logo {
     height: 3rem;
   }
