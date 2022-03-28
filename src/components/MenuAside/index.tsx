@@ -22,12 +22,6 @@ const menuLinks = [
     path: iconsPath.dashboard,
     name: 'Dashboard',
   },
-
-  {
-    to: '/config',
-    path: iconsPath.config,
-    name: 'Configuração',
-  },
 ];
 
 export function MenuAside() {

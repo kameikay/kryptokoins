@@ -25,6 +25,7 @@ export const Container = styled.div<IContainer>`
   .title {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 
     .name {
       display: flex;
@@ -76,7 +77,7 @@ export const Container = styled.div<IContainer>`
           &::after {
             content: "";
             position: absolute;
-            bottom: -.5rem;
+            bottom: -0.5rem;
             left: 0;
             width: 100%;
             height: 4px;
@@ -96,6 +97,28 @@ export const Container = styled.div<IContainer>`
 
       > div + div {
         margin-left: 1rem;
+      }
+    }
+
+    .time-data {
+      margin-top: 2rem;
+
+      p {
+        span {
+          font-weight: bold;
+        }
+
+        .positive {
+          color: ${({ theme }) => theme.colors.success.dark};
+        }
+
+        .negative {
+          color: ${({ theme }) => theme.colors.error.main};
+        }
+      }
+
+      p + p {
+        margin-top: 1rem;
       }
     }
   }
