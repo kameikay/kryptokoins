@@ -20,5 +20,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".ts", ".jsx", ".tsx"] }],
+      "react-hooks/rules-of-hooks": "error"
     }
 }

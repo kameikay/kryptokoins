@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background.paper};
   border-radius: 1.5rem;
-  border: .5px solid #d3d8d9;
+  border: 0.5px solid #d3d8d9;
   box-shadow: 0px 16px 22px -16px rgb(15 50 86 / 32%);
   padding: 1.5rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   width: 18rem;
   margin-top: 2rem;
 
@@ -18,7 +18,7 @@ export const Container = styled.div`
 
   &:hover {
     box-shadow: 0px 16px 22px -16px rgb(15 50 86 / 64%);
-    border: .5px solid ${({ theme }) => theme.colors.primary.main};
+    border: 0.5px solid ${({ theme }) => theme.colors.primary.main};
   }
 
   img {
@@ -47,6 +47,13 @@ export const Container = styled.div`
     .price {
       font-weight: bold;
     }
-  }
 
-`
+    .positive-number {
+      color: ${({ theme }) => theme.colors.success.dark};
+    }
+
+    .negative-number {
+      color: ${({ theme }) => theme.colors.error.main};
+    }
+  }
+`;

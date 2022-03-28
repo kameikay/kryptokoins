@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import PageLayout from "./components/PageLayout";
+import { CryptoIndividualPage } from "./pages/CryptoIndividualPage";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import { GlobalStyles } from "./styles";
@@ -27,6 +28,7 @@ function App() {
 
           <Route path="/home" element={<PageLayout />}>
             <Route index element={<Home />} />
+            <Route path=":id" element={<CryptoIndividualPage />}/>
           </Route>
         </Routes>
       </ThemeProvider>

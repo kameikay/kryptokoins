@@ -54,7 +54,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: flex-start;
 
-    > div {
+    div {
       margin: 1rem 0.5rem;
     }
   }

@@ -20,9 +20,14 @@ export function CryptoCards({ data }: ICryptoCards) {
 
       <div className="values">
         <p>
-          <span>
-            {data &&
-              formatPercentage(data["1d"].price_change_pct)}
+          <span
+            className={
+              Number(data["1d"].price_change_pct) > 0
+                ? "positive-number"
+                : "negative-number"
+            }
+          >
+            {data && formatPercentage(data["1d"].price_change_pct)}
           </span>{" "}
           nas últimas 24 horas
         </p>
