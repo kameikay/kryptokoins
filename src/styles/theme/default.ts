@@ -1,4 +1,5 @@
 export const theme = {
+  title: 'light',
   colors: {
     primary: {
       main: "#3068CB",
@@ -39,6 +40,18 @@ export const theme = {
     text: {
       primary: "#121212",
       secondary: "#fff",
+    },
+  },
+};
+
+export const darkTheme = {
+  ...theme,
+  title: 'dark',
+  colors: {
+    ...theme.colors,
+    background: {
+      default: "#121212",
+      paper: "#1E1E1E",
     },
   },
 };
