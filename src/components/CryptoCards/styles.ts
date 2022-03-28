@@ -14,6 +14,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  transition: all 1s ease-in-out;
 
   &:hover {
     box-shadow: 0px 16px 22px -16px rgb(15 50 86 / 64%);

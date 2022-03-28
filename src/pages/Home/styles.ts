@@ -73,7 +73,7 @@ export const Container = styled.div`
       padding: 1rem;
       border-radius: 0.5rem;
       background-color: ${({ theme }) => theme.colors.primary.main};
-      color: ${({ theme }) => theme.colors.background.paper};
+      color: ${({ theme }) => theme.colors.primary.contrastText};
       font-weight: bold;
       transition: all 0.3s ease-in;
 

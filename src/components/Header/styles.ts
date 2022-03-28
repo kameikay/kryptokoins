@@ -3,11 +3,13 @@ import styled from "styled-components";
 export const Container = styled.header`
   width: 100%;
   height: 60px;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.background.paper};
+
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0 30px;
+  transition: all 1s ease-in-out;
 
   p {
     span {

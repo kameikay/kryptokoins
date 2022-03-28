@@ -9,7 +9,7 @@ export const Container = styled.aside<IContainer>`
   height: 100vh;
   padding: 2rem 0;
   position: fixed;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.background.paper};
   border-right: 1px solid ${({ theme }) => theme.colors.gray.light};
   display: flex;
   flex-direction: column;
