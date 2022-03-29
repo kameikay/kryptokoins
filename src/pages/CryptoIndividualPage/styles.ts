@@ -102,23 +102,33 @@ export const Container = styled.div<IContainer>`
 
     .time-data {
       margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      p {
-        span {
-          font-weight: bold;
-        }
+      &-card {
+        padding: 1rem 2rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        border: none;
+        border-radius: 0.5rem;
 
-        .positive {
-          color: ${({ theme }) => theme.colors.success.dark};
-        }
+        p {
+          span {
+            font-weight: bold;
+          }
 
-        .negative {
-          color: ${({ theme }) => theme.colors.error.main};
+          .positive {
+            color: ${({ theme }) => theme.colors.success.dark};
+          }
+
+          .negative {
+            color: ${({ theme }) => theme.colors.error.main};
+          }
         }
       }
 
-      p + p {
-        margin-top: 1rem;
+      > div + div {
+        margin-left: 1rem;
       }
     }
   }
