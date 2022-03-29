@@ -242,7 +242,15 @@ export function CryptoIndividualPage() {
         )}
       </div>
 
-      <Calculator logo_url={data.logo_url} id={data.id} name={data.name} price={Number(data.price)}/>
+      <div className="calculator-container">
+        <h2>Calculadora de conversão {data.name} ({data.id})</h2>
+        <Calculator
+          logo_url={data.logo_url}
+          id={data.id}
+          name={data.name}
+          price={Number(data.price)}
+        />
+      </div>
     </Container>
   );
 }

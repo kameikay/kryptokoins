@@ -17,11 +17,6 @@ const menuLinks = [
     path: iconsPath.home,
     name: 'Home',
   },
-  {
-    to: '/dashboard',
-    path: iconsPath.dashboard,
-    name: 'Dashboard',
-  },
 ];
 
 export function MenuAside() {

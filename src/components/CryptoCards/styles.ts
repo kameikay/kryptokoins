@@ -31,6 +31,7 @@ export const Container = styled.div`
     font-weight: 700;
     font-family: sans-serif;
     line-height: 28px;
+    color: ${({ theme }) => theme.colors.text.primary};
   }
 
   small {
@@ -39,6 +40,7 @@ export const Container = styled.div`
 
   .values {
     margin-top: 3rem;
+    color: ${({ theme }) => theme.colors.text.primary};
 
     p + p {
       margin-top: 1rem;

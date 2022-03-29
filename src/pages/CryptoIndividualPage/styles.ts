@@ -132,4 +132,13 @@ export const Container = styled.div<IContainer>`
       }
     }
   }
+
+  .calculator-container {
+    margin-top: 2rem;
+    width: 100%;
+
+    > h2 {
+      text-align: center;
+    }
+  }
 `;

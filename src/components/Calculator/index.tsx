@@ -61,7 +61,7 @@ export default function Calculator({ logo_url, id, name, price }: ICalculator) {
         {isConvertingToCrypto ? (
           <div className="calculator-convert">
             <div className="to">
-              <span>Para: </span>
+              <span>De: </span>
               <div className="to-card">
                 <small>R$</small>
                 <h3>Reais brasileiros</h3>
@@ -77,7 +77,7 @@ export default function Calculator({ logo_url, id, name, price }: ICalculator) {
             </div>
 
             <div className="from">
-              <span>De: </span>
+              <span>Para: </span>
               <div className="from-card">
                 <img src={logo_url} alt="Logo" />
                 <div className="from-card-title">
