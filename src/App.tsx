@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import PageLayout from "./components/PageLayout";
+import Page404 from "./pages/404";
 import { CryptoIndividualPage } from "./pages/CryptoIndividualPage";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -30,6 +31,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path=":id" element={<CryptoIndividualPage />}/>
           </Route>
+
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </ThemeProvider>
     </AppContext.Provider>
