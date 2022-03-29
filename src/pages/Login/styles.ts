@@ -20,11 +20,10 @@ export const LeftContainer = styled.div`
   justify-content: center;
   padding: 1rem;
 
-  >div {
+  > div {
     width: 100%;
     margin: 0;
     padding: 0;
-
   }
   svg {
     width: 100%;
@@ -77,13 +76,36 @@ export const RightContainer = styled.div`
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-color: ${({ theme }) => darken(0.1, theme.colors.primary.main)};
+        background-color: ${({ theme }) =>
+          darken(0.1, theme.colors.primary.main)};
       }
 
       &[disabled] {
         background-color: ${({ theme }) => darken(0.1, theme.colors.gray.main)};
         cursor: not-allowed;
       }
+    }
+  }
+`;
+
+export const Footer = styled.footer`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: 0.5rem;
+
+  a {
+    color: ${({ theme }) => theme.colors.primary.contrastText};
+
+    &:hover {
+      color: ${({ theme }) => darken(0.1, theme.colors.primary.contrastText)};
     }
   }
 `;

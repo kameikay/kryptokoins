@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { MdOutlineAlternateEmail, MdLockOutline } from "react-icons/md";
 import Lottie from "react-lottie";
 
-import { Container, LeftContainer, RightContainer } from "./styles";
+import { Container, Footer, LeftContainer, RightContainer } from "./styles";
 
 import { FormGroup } from "../../components/FormGroup";
 import { LoginInput } from "../../components/LoginInput";
@@ -126,6 +126,12 @@ export default function Login() {
           <button disabled={errors.length > 0 || !email}>Entrar</button>
         </form>
       </RightContainer>
+
+      <Footer>
+        <a href="https://nomics.com">
+          Crypto Market Cap & Pricing Data Provided By Nomics
+        </a>
+      </Footer>
     </Container>
   );
 }
