@@ -17,7 +17,7 @@ export default function Calculator({ logo_url, id, name, price }: ICalculator) {
   const [isConvertingToCrypto, setIsConvertingToCryto] = useState(false);
 
   function convertToCrypto(value: number) {
-    const convertedResult = formatCurrency(value / price);
+    const convertedResult = String((value / price).toFixed(2));
     setResult(convertedResult);
   }
 
@@ -120,7 +120,7 @@ export default function Calculator({ logo_url, id, name, price }: ICalculator) {
 
         {isConvertingToCrypto ? (
           <div className="result">
-            <strong>{String(inputValue).replace(".", ",")} </strong>
+            <strong>{formatCurrency(inputValue)} </strong>
             Reais brasileiros (R$) = <strong>{result}</strong> {name} ({id})
           </div>
         ) : (
