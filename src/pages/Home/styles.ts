@@ -11,6 +11,7 @@ export const Container = styled.div`
 
   .title {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -33,6 +34,18 @@ export const Container = styled.div`
         }
       }
     }
+
+    input {
+      margin: 1rem 0;
+      height: 3rem;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+      width: 20rem;
+      background-color: ${({ theme }) => theme.colors.background.paper};
+      padding: 0.5rem;
+      outline: none;
+    }
   }
 
   .loading {
@@ -52,7 +65,7 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
     div {
       margin: 1rem 0.5rem;
@@ -87,5 +100,11 @@ export const Container = styled.div`
         cursor: default;
       }
     }
+  }
+
+  .no-results {
+    text-align: center;
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.error.main};
   }
 `;
