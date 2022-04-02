@@ -8,6 +8,11 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+
+  @media screen and (max-width: 480px) {
+    height: 100vh;
+    width: 100%;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -25,10 +30,16 @@ export const LeftContainer = styled.div`
     margin: 0;
     padding: 0;
   }
+
   svg {
     width: 100%;
     height: 100%;
   }
+
+  @media screen and (max-width: 480px) {
+   display: none;
+  }
+
 `;
 
 export const RightContainer = styled.div`
@@ -84,6 +95,18 @@ export const RightContainer = styled.div`
         background-color: ${({ theme }) => darken(0.1, theme.colors.gray.main)};
         cursor: not-allowed;
       }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+    .title {
+      text-align: center;
+      color: ${({ theme }) => theme.colors.primary.main};
+    }
+    form {
+      padding: 2rem;
     }
   }
 `;
