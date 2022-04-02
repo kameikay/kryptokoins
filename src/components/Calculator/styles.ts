@@ -14,6 +14,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
     &-title {
       display: flex;
       flex-direction: column;
@@ -58,6 +62,30 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        flex-direction: column;
+
+        .from {
+          width: 100%;
+
+          .from-card {
+            justify-content: center !important;
+            width: 100% !important;
+          }
+        }
+
+        .to {
+          width: 100%;
+
+          &-card {
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+          }
+        }
+      }
 
       .from {
         span {
@@ -149,6 +177,10 @@ export const Container = styled.div`
     .result {
       margin-top: 2rem;
       font-size: 1.2rem;
+
+      @media screen and (max-width: 480px) {
+        text-align: center;
+      }
     }
   }
 `;

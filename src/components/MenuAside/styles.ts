@@ -18,6 +18,10 @@ export const Container = styled.aside<IContainer>`
   transition: all 1s ease-in-out;
   z-index: 99;
 
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+
   .logo {
     height: 3rem;
   }

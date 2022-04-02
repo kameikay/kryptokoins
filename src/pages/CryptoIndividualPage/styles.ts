@@ -49,6 +49,21 @@ export const Container = styled.div<IContainer>`
     width: 100%;
     height: 100%;
 
+    @media screen and (max-width: 480px) {
+
+      &-select {
+
+        .select-button {
+          padding: 0 !important;
+        }
+      }
+
+      .time-data-card {
+        width: 100% !important;
+        text-align: center !important;
+      }
+    }
+
     .time-select {
       width: 100%;
       height: 100%;

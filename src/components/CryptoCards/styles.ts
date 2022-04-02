@@ -16,6 +16,12 @@ export const Container = styled.div`
   justify-content: space-between;
   transition: all 1s ease-in-out;
 
+  @media screen and (max-width: 480px) {
+    width: 20rem;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
   &:hover {
     box-shadow: 0px 16px 22px -16px rgb(15 50 86 / 64%);
     border: 0.5px solid ${({ theme }) => theme.colors.primary.main};

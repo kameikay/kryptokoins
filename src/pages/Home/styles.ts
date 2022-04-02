@@ -9,6 +9,10 @@ export const Container = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 480px) {
+    overflow-x: hidden;
+  }
+
   .title {
     display: flex;
     flex-direction: column;
@@ -69,6 +73,12 @@ export const Container = styled.div`
 
     div {
       margin: 1rem 0.5rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      div {
+        margin: 1rem 0;
+      }
     }
   }
 

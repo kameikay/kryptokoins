@@ -11,6 +11,10 @@ export const Container = styled.header`
   padding: 0 30px;
   transition: all 1s ease-in-out;
 
+  @media screen and (max-width: 480px) {
+    justify-content: space-between;
+  }
+
   p {
     span {
       font-weight: bold;
